@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "title": "Now - version 1.0",
+    "text": "Our current version 1.0 already provides you with instant and free BTC to USDT exchange on Windows and Mac, featuring a simple interface and a high level of security. But this is just the beginning!"
+  },
+  {
+    "id": 2,
+    "title": "Current Quarter - version 1.1",
+    "text": "We are focusing on expanding functionality. First and foremost, we will add support for other popular cryptocurrencies such as ETH, LTC, and BNB. Furthermore, price charts will be available so you can track the dynamics of rates directly within the application."
+  },
+  {
+    "id": 3,
+    "title": "Next year - version 1.2",
+    "text": "We plan to provide even more control over your transactions. This includes the ability to set limit orders and integrate with hardware wallets for maximum asset protection. We will also expand language support and improve analytics for easier tracking of your operations."
+  },
+  {
+    "id": 4,
+    "title": "? year - version 1.3",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "blur": true
+  }
+]

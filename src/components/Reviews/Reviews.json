@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "name": "Ilon mask",
+    "role": "American entrepreneur, engineer and billionaire,\nstatesman, political and public figure.",
+    "text": "Cryptoleap offers a smart approach to exchanging BTC for USDT using a desktop application instead of a web platform. This significantly reduces the attack surface and increases the level of protection of user data. Of course, zero commission is a big plus, but as an expert, I value security above all. Cryptoleap demonstrates a high level of security, which makes it attractive for professionals who care about the safety of their assets.",
+    "avatar": "https://images.unsplash.com/photo-1603415526960-f7e0328f4c5f?auto=format&fit=crop&w=256&q=80"
+  },
+  {
+    "id": 2,
+    "name": "Ivan Sidorov",
+    "role": "Crypto analyst, private investor.",
+    "text": "Convenient interface, fast swaps and decent security. The desktop format feels safer than yet another web page. Everything is clear even for non-tech users.",
+    "avatar": "https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=256&q=80"
+  },
+  {
+    "id": 3,
+    "name": "Alexey Petrov",
+    "role": "Financial analyst. 10+ years experience.",
+    "text": "Low fees are great, but the real value is in reduced attack surface. For OTC-like quick exchanges this is a solid option.",
+    "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=256&q=80"
+  },
+  {
+    "id": 4,
+    "name": "Ivan Sidorov",
+    "role": "Crypto analyst, private investor.",
+    "text": "Convenient interface, fast swaps and decent security. The desktop format feels safer than yet another web page. Everything is clear even for non-tech users.",
+    "avatar": "https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=256&q=80"
+  },
+  {
+    "id": 5,
+    "name": "Alexey Petrov",
+    "role": "Financial analyst. 10+ years experience.",
+    "text": "Low fees are great, but the real value is in reduced attack surface. For OTC-like quick exchanges this is a solid option.",
+    "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=256&q=80"
+  }
+]
