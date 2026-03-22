@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,14 +17,17 @@ export default function Header() {
   return (
     <header className={`header ${isMenuOpen ? "menu-open" : ""}`}>
       <div className="header-wrapper">
-        <p className="logo">CryptoLeap</p>
+        <Link to="/" className="logo" onClick={closeMenu}>
+          CryptoLeap
+        </Link>
 
         <nav className={`header-nav ${isMenuOpen ? "active" : ""}`}>
-          <a href="#" onClick={closeMenu}>About us</a>
-          <a href="#" onClick={closeMenu}>Contacts</a>
-          <a href="#" onClick={closeMenu}>Reviews</a>
-          <a href="#" onClick={closeMenu}>RoadMap</a>
-          <a href="#" onClick={closeMenu}>App</a>
+          <Link to="/about" onClick={closeMenu}>About us</Link>
+          <Link to="/contacts" onClick={closeMenu}>Contacts</Link>
+          <a href="/#reviews" onClick={closeMenu}>Reviews</a>
+          <a href="/#roadmap" onClick={closeMenu}>RoadMap</a>
+          <a href="/download" onClick={closeMenu}>Download</a>
+
           <button className="download-btn mobile-download" onClick={closeMenu}>
             Download
           </button>

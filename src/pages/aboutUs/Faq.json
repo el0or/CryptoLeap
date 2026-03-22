@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "question": "How does CryptoLeap simplify crypto exchange?",
+    "answer": "CryptoLeap provides a clear desktop interface that helps users exchange crypto quickly without dealing with overly complex exchange dashboards and confusing trading tools."
+  },
+  {
+    "id": 2,
+    "question": "Is CryptoLeap suitable for beginners?",
+    "answer": "Yes. The application is designed for both beginners and advanced users, so even first-time users can navigate the exchange process with minimal effort."
+  },
+  {
+    "id": 3,
+    "question": "Which cryptocurrencies can I exchange in the app?",
+    "answer": "CryptoLeap focuses on simple and popular exchange directions, including BTC to USDT, with a user-friendly flow for fast operations."
+  },
+  {
+    "id": 4,
+    "question": "Do I need to pay for using CryptoLeap?",
+    "answer": "No. According to the project concept, CryptoLeap is completely free to use, making crypto exchange more accessible and affordable."
+  },
+  {
+    "id": 5,
+    "question": "Is CryptoLeap available for both Windows and Mac?",
+    "answer": "Yes. CryptoLeap is designed as a desktop application and is available for both Windows and Mac users."
+  }
+]

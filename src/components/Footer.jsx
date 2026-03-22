@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Footer() {
   return (
     <footer className="footer">
@@ -13,19 +15,19 @@ export default function Footer() {
         </div>
 
         <nav className="footer__nav">
-          <a href="#about">About Us</a>
-          <a href="#partners">Partners</a>
-          <a href="#reviews">Reviews</a>
+          <Link to="/about">About Us</Link>
+          <Link to="/contacts">Contacts</Link>
+          <a href="/#reviews">Reviews</a>
         </nav>
 
         <nav className="footer__nav">
-          <a href="#roadmap">RoadMap</a>
-          <a href="#app">App</a>
+          <a href="/#roadmap">RoadMap</a>
+          <Link to="/download">Download</Link>
         </nav>
 
-        <a className="footer__download" href="#download">
+        <Link className="footer__download" to="/download">
           Download
-        </a>
+        </Link>
       </div>
     </footer>
   );

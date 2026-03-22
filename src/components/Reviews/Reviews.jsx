@@ -29,7 +29,7 @@ export default function ReviewsSlider() {
   const rightIndex = mod(active + 1, items.length);
 
   return (
-    <section className="reviews">
+    <section className="reviews" id="reviews">
       <h2 className="reviews-title">Reviews</h2>
 
       <div className="reviews-slider">

@@ -1,0 +1,272 @@
+.download-info {
+  padding: 9vw 0 0;
+}
+
+.download-info__container {
+  max-width: 90vw;
+  margin: 0 auto 4.5vw;
+}
+
+.download-info__title {
+  margin: 0 0 4vw;
+  font-size: 2.5vw;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #fff;
+}
+
+.download-info__content {
+  display: grid;
+  grid-template-columns: 20vw 1fr;
+  gap: 8vw;
+  align-items: center;
+}
+
+.download-info__image {
+  width: 100%;
+}
+
+.download-info__image img {
+  display: block;
+  width: 100%;
+  max-width: 18vw;
+}
+
+.download-info__text {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4vw;
+}
+
+.download-info__text p {
+  margin: 0;
+  font-size: 2vw;
+  font-weight: 700;
+  line-height: 1.35;
+  color: #fff;
+}
+
+.download-links {
+  padding: 0 0 8vw;
+}
+
+.download-links__container {
+  max-width: 90vw;
+  margin: 0 auto 4.5vw;
+}
+
+.download-links__title {
+  margin: 0 0 3vw;
+  font-size: 2.5vw;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #fff;
+}
+
+.download-links__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10vw;
+  align-items: center;
+}
+
+.download-links__item {
+  display: flex;
+  align-items: center;
+  gap: 1.6vw;
+  text-decoration: none;
+}
+
+.download-links__item img {
+  width: 4.2vw;
+  height: 4.2vw;
+  flex-shrink: 0;
+}
+
+.download-links__item span {
+  font-size: 2vw;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #fff;
+  transition: color 180ms ease;
+}
+
+.download-links__item:hover span {
+  color: #8912bb;
+}
+
+@media (max-width: 1024px) {
+  .download-info {
+    padding: 13vw 0 0;
+  }
+
+  .download-info__container {
+    margin: 0 auto 6vw;
+  }
+
+  .download-info__title {
+    margin-bottom: 5vw;
+    font-size: 4.2vw;
+  }
+
+  .download-info__content {
+    grid-template-columns: 24vw 1fr;
+    gap: 6vw;
+  }
+
+  .download-info__image img {
+    max-width: 24vw;
+  }
+
+  .download-info__text {
+    gap: 3vw;
+  }
+
+  .download-info__text p {
+    font-size: 2.6vw;
+  }
+
+  .download-links {
+    padding-bottom: 10vw;
+  }
+
+  .download-links__container {
+    margin: 0 auto 6vw;
+  }
+
+  .download-links__title {
+    margin-bottom: 4vw;
+    font-size: 4vw;
+  }
+
+  .download-links__grid {
+    gap: 6vw;
+  }
+
+  .download-links__item {
+    gap: 2vw;
+  }
+
+  .download-links__item img {
+    width: 6vw;
+    height: 6vw;
+  }
+
+  .download-links__item span {
+    font-size: 2.7vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .download-info {
+    padding: 20vw 0 0;
+  }
+
+  .download-info__container {
+    max-width: 90vw;
+    margin: 0 auto 8vw;
+  }
+
+  .download-info__title {
+    margin-bottom: 6vw;
+    font-size: 7vw;
+  }
+
+  .download-info__content {
+    grid-template-columns: 1fr;
+    gap: 8vw;
+  }
+
+  .download-info__image img {
+    max-width: 46vw;
+    margin: 0 auto;
+  }
+
+  .download-info__text {
+    gap: 5vw;
+  }
+
+  .download-info__text p {
+    font-size: 4.8vw;
+    line-height: 1.35;
+  }
+
+  .download-links {
+    padding-bottom: 12vw;
+  }
+
+  .download-links__container {
+    max-width: 90vw;
+    margin: 0 auto 8vw;
+  }
+
+  .download-links__title {
+    margin-bottom: 5vw;
+    font-size: 6.5vw;
+  }
+
+  .download-links__grid {
+    grid-template-columns: 1fr;
+    gap: 5vw;
+  }
+
+  .download-links__item {
+    gap: 3vw;
+  }
+
+  .download-links__item img {
+    width: 10vw;
+    height: 10vw;
+  }
+
+  .download-links__item span {
+    font-size: 4.6vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .download-info {
+    padding: 24vw 0 0;
+  }
+
+  .download-info__container {
+    margin: 0 auto 9vw;
+  }
+
+  .download-info__title {
+    font-size: 8vw;
+  }
+
+  .download-info__image img {
+    max-width: 52vw;
+  }
+
+  .download-info__text p {
+    font-size: 5vw;
+  }
+
+  .download-links {
+    padding-bottom: 14vw;
+  }
+
+  .download-links__container {
+    margin: 0 auto 9vw;
+  }
+
+  .download-links__title {
+    font-size: 7vw;
+  }
+
+  .download-links__grid {
+    gap: 6vw;
+  }
+
+  .download-links__item img {
+    width: 11vw;
+    height: 11vw;
+  }
+
+  .download-links__item span {
+    font-size: 5vw;
+  }
+}

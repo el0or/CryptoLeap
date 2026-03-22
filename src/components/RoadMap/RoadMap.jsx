@@ -2,7 +2,7 @@ import roadmap from "./RoadMap.json";
 
 export default function Roadmap() {
   return (
-    <section className="roadmap">
+    <section className="roadmap" id="roadmap">
       <div className="roadmap__wrapper">
         <h2 className="roadmap__title">RoadMap</h2>
 
