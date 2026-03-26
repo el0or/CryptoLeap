@@ -1,0 +1,295 @@
+.account-page {
+  padding: 3.5vw 2.5vw 6vw;
+}
+
+.account-page__container {
+  max-width: 90vw;
+  margin: 0 auto 4.5vw;
+}
+
+.account-page__title {
+  margin: 0 0 3vw;
+  font-size: 2.5vw;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #fff;
+}
+
+.account-page__status {
+  margin: 0 0 2vw;
+  font-size: 1.3vw;
+  color: #fff;
+}
+
+.account-page__grid {
+  display: grid;
+  grid-template-columns: 24vw 1fr;
+  gap: 1.8vw;
+  align-items: start;
+}
+
+.account-page__right {
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
+}
+
+.account-card {
+  background: transparent;
+  border: 0.08vw solid rgba(137, 18, 187, 0.75);
+  border-radius: 1vw;
+}
+
+.account-card--profile {
+  min-height: 39vw;
+  padding: 1.2vw 1vw;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1vw;
+}
+
+.account-card__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45vw;
+  padding-bottom: 0.8vw;
+  border-bottom: 0.08vw solid #b400ff;
+}
+
+.account-card__label {
+  font-size: 1vw;
+  color: #fff;
+}
+
+.account-card__value {
+  font-size: 1vw;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.account-card--rates {
+  min-height: 18vw;
+  padding: 1.4vw 1.2vw;
+}
+
+.account-card__rates-title {
+  margin: 0 0 1.8vw;
+  font-size: 1.5vw;
+  font-weight: 600;
+  color: #fff;
+}
+
+.account-rates {
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+}
+
+.account-rates__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2vw;
+  padding-bottom: 0.8vw;
+  border-bottom: 0.08vw solid rgba(255, 255, 255, 0.1);
+}
+
+.account-rates__name {
+  font-size: 1.05vw;
+  color: #fff;
+}
+
+.account-rates__value {
+  font-size: 1.05vw;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.account-rates__note {
+  margin-top: 0.6vw;
+  font-size: 0.9vw;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.account-page__logout {
+  width: 100%;
+  min-height: 3.5vw;
+  border-radius: 0.9vw;
+  border: 0.08vw solid rgba(255, 255, 255, 0.9);
+  background: transparent;
+  font-size: 1.2vw;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  transition: 180ms ease;
+}
+
+.account-page__logout:hover {
+  border-color: #b400ff;
+  color: #b400ff;
+}
+
+@media (max-width: 1024px) {
+  .account-page {
+    padding: 13vw 0 10vw;
+  }
+
+  .account-page__title {
+    margin-bottom: 5vw;
+    font-size: 4.5vw;
+  }
+
+  .account-page__status {
+    margin-bottom: 3vw;
+    font-size: 2vw;
+  }
+
+  .account-page__grid {
+    grid-template-columns: 30vw 1fr;
+    gap: 2vw;
+  }
+
+  .account-page__right {
+    gap: 2.5vw;
+  }
+
+  .account-card {
+    border-radius: 1.6vw;
+  }
+
+  .account-card--profile {
+    min-height: 48vw;
+    padding: 2vw 1.6vw;
+    gap: 1.8vw;
+  }
+
+  .account-card__field {
+    gap: 0.7vw;
+    padding-bottom: 1.2vw;
+  }
+
+  .account-card__label,
+  .account-card__value {
+    font-size: 1.5vw;
+  }
+
+  .account-card--rates {
+    min-height: 24vw;
+    padding: 2vw 1.8vw;
+  }
+
+  .account-card__rates-title {
+    margin-bottom: 2.5vw;
+    font-size: 2.2vw;
+  }
+
+  .account-rates {
+    gap: 1.6vw;
+  }
+
+  .account-rates__item {
+    padding-bottom: 1.1vw;
+  }
+
+  .account-rates__name,
+  .account-rates__value {
+    font-size: 1.6vw;
+  }
+
+  .account-rates__note {
+    font-size: 1.3vw;
+  }
+
+  .account-page__logout {
+    min-height: 5vw;
+    border-radius: 1.3vw;
+    font-size: 1.8vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .account-page {
+    padding: 20vw 0 12vw;
+  }
+
+  .account-page__container {
+    max-width: 90vw;
+    margin: 0 auto 8vw;
+  }
+
+  .account-page__title {
+    margin-bottom: 6vw;
+    font-size: 7vw;
+  }
+
+  .account-page__status {
+    margin-bottom: 5vw;
+    font-size: 4vw;
+  }
+
+  .account-page__grid {
+    grid-template-columns: 1fr;
+    gap: 5vw;
+  }
+
+  .account-page__right {
+    gap: 5vw;
+  }
+
+  .account-card {
+    border-width: 0.2vw;
+    border-radius: 3vw;
+  }
+
+  .account-card--profile {
+    min-height: auto;
+    padding: 4vw;
+    gap: 4vw;
+  }
+
+  .account-card__field {
+    gap: 1.5vw;
+    padding-bottom: 2.4vw;
+    border-bottom-width: 0.2vw;
+  }
+
+  .account-card__label,
+  .account-card__value {
+    font-size: 4vw;
+  }
+
+  .account-card--rates {
+    min-height: auto;
+    padding: 4vw;
+  }
+
+  .account-card__rates-title {
+    margin-bottom: 5vw;
+    font-size: 4.8vw;
+  }
+
+  .account-rates {
+    gap: 3.6vw;
+  }
+
+  .account-rates__item {
+    padding-bottom: 2.4vw;
+    border-bottom-width: 0.2vw;
+  }
+
+  .account-rates__name,
+  .account-rates__value {
+    font-size: 4vw;
+  }
+
+  .account-rates__note {
+    margin-top: 1vw;
+    font-size: 3.4vw;
+  }
+
+  .account-page__logout {
+    width: 100%;
+    min-height: 12vw;
+    border-width: 0.2vw;
+    border-radius: 3vw;
+    font-size: 4.2vw;
+  }
+}

@@ -5,6 +5,7 @@ import Home from "./pages/Home.jsx";
 import Contacts from "./pages/contact/Contact.jsx";
 import AboutUs from "./pages/aboutUs/AboutUs.jsx";
 import Download from "./pages/download/Download.jsx";
+import Account from "./pages/account/Account.jsx";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/contacts" element={<Contacts />} />
         <Route path="/about" element={<AboutUs />} />
         <Route path="/download" element={<Download/>} />
+        <Route path="/account" element={<Account />} />
       </Routes>
 
       <Footer />

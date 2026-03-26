@@ -621,10 +621,6 @@ body {
 
 @media (max-width: 1200px) {
   .reviews {
-    .reviews-title {
-      font-size: 3vw;
-    }
-
     .reviews-slider {
       min-height: 26vw;
 
@@ -1174,13 +1170,13 @@ body {
 .roadmap__row--right .roadmap__lineConnector::after {
   left: -0.21vw;
 }
-@media (max-width: 1024px) {
+@media (max-width: 900px) {
   .roadmap {
     padding: 6vw 5vw 8vw;
   }
 
   .roadmap__title {
-    font-size: 4.4vw;
+    font-size: 5vw;
     margin-bottom: 8vw;
   }
 

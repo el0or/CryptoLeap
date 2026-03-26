@@ -1,0 +1,153 @@
+.auth-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+}
+
+.auth-modal__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(0.5vw);
+}
+
+.auth-modal__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 52vw;
+  max-width: 52vw;
+  transform: translate(-50%, -50%);
+  padding: 3vw 2.4vw 2.6vw;
+  border: 0.08vw solid rgba(137, 18, 187, 0.45);
+  border-radius: 1.5vw;
+  background: #050816;
+  box-shadow: 0 0 2vw rgba(137, 18, 187, 0.12);
+}
+
+.auth-modal__close {
+  position: absolute;
+  top: 1vw;
+  right: 1vw;
+  border: none;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 1.6vw;
+  cursor: pointer;
+}
+
+.auth-modal__title {
+  margin: 0 0 2.8vw;
+  font-size: 2.4vw;
+  font-weight: 700;
+  color: #fff;
+}
+
+.auth-modal__form {
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
+}
+
+.auth-modal__row {
+  width: 100%;
+}
+
+.auth-modal__row--two {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1vw;
+}
+
+.auth-modal__row input {
+  width: 100%;
+  padding: 0.7vw 0 1vw;
+  border: none;
+  border-bottom: 0.08vw solid #b400ff;
+  background: transparent;
+  outline: none;
+  font-size: 1vw;
+  color: #fff;
+}
+
+.auth-modal__row input::placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.auth-modal__error {
+  margin: 0;
+  font-size: 0.9vw;
+  color: #ff6b6b;
+}
+
+.auth-modal__submit {
+  width: 11vw;
+  min-height: 3vw;
+  border-radius: 999vw;
+  border: 0.08vw solid rgba(255, 255, 255, 0.9);
+  background: transparent;
+  color: #fff;
+  font-size: 1vw;
+  cursor: pointer;
+}
+
+.auth-modal__switch {
+  width: fit-content;
+  border: none;
+  background: transparent;
+  padding: 0;
+  font-size: 0.95vw;
+  color: rgba(255, 255, 255, 0.72);
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .auth-modal__content {
+    width: 90vw;
+    max-width: 90vw;
+    padding: 8vw 5vw 6vw;
+    border-width: 0.2vw;
+    border-radius: 4vw;
+  }
+
+  .auth-modal__close {
+    top: 3vw;
+    right: 3vw;
+    font-size: 5vw;
+  }
+
+  .auth-modal__title {
+    margin-bottom: 6vw;
+    font-size: 7vw;
+  }
+
+  .auth-modal__form {
+    gap: 5vw;
+  }
+
+  .auth-modal__row--two {
+    grid-template-columns: 1fr;
+    gap: 4vw;
+  }
+
+  .auth-modal__row input {
+    padding: 2vw 0 2.5vw;
+    border-bottom-width: 0.2vw;
+    font-size: 4vw;
+  }
+
+  .auth-modal__error {
+    font-size: 3.6vw;
+  }
+
+  .auth-modal__submit {
+    width: 36vw;
+    min-height: 11vw;
+    font-size: 4vw;
+    border-width: 0.2vw;
+  }
+
+  .auth-modal__switch {
+    font-size: 3.8vw;
+  }
+}
