@@ -9,7 +9,10 @@ dotenv.config();
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: ["https://cryptoleap.ru", "https://www.cryptoleap.ru"],
+  credentials: true
+}));
 app.use(express.json());
 
 let pool;
