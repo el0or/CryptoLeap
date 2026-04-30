@@ -189,27 +189,46 @@ app.get("/api/auth/me", authMiddleware, async (req, res) => {
 app.get("/api/rates", async (req, res) => {
   try {
     const response = await fetch(
-      "https://api.frankfurter.app/latest?from=RUB&to=USD,EUR"
+      "https://www.api.frankfurter.dev/v1/latest?from=RUB&to=USD,EUR"
     );
 
     if (!response.ok) {
-      return res.status(502).json({ message: "Failed to load rates" });
+      console.error("Frankfurter error:", response.status, response.statusText);
+
+      return res.json({
+        base: "RUB",
+        date: null,
+        rates: {
+          USD: null,
+          EUR: null,
+          RUB: 1,
+        },
+      });
     }
 
     const data = await response.json();
 
     return res.json({
-      base: data.base,
-      date: data.date,
+      base: data.base || "RUB",
+      date: data.date || null,
       rates: {
-        USD: data.rates.USD,
-        EUR: data.rates.EUR,
+        USD: data.rates?.USD ?? null,
+        EUR: data.rates?.EUR ?? null,
         RUB: 1,
       },
     });
   } catch (error) {
-    console.error(error);
-    return res.status(500).json({ message: "Rates server error" });
+    console.error("Rates load error:", error.message);
+
+    return res.json({
+      base: "RUB",
+      date: null,
+      rates: {
+        USD: null,
+        EUR: null,
+        RUB: 1,
+      },
+    });
   }
 });
 
