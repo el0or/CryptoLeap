@@ -18,10 +18,8 @@
 .contacts__card {
   margin: 0 auto;
   padding: 3vw 2.8vw;
-
   border: 0.08vw solid rgba(137, 18, 187, 0.55);
   border-radius: 1.6vw;
-
   background: rgba(5, 8, 22, 0.96);
   box-shadow: 0 0 2vw rgba(137, 18, 187, 0.08);
   margin: 0vw 12vw;
@@ -58,14 +56,11 @@
 .contacts__field textarea {
   width: 100%;
   padding: 0.6vw 0 1vw;
-
   border: none;
   border-bottom: 0.08vw solid #b400ff;
   background: transparent;
-
   font-size: 1.1vw;
   color: #fff;
-
   outline: none;
   resize: none;
 }
@@ -75,6 +70,35 @@
   color: rgba(255, 255, 255, 0.9);
 }
 
+/* PHONE BLOCK */
+.contacts__phone {
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+  border-bottom: 0.08vw solid #b400ff;
+}
+
+.contacts__phone input {
+  border-bottom: none;
+}
+
+.contacts__select {
+  min-width: 5.5vw;
+  padding: 0.6vw 0 1vw;
+  border: none;
+  background: transparent;
+  color: #fff;
+  font-size: 1.1vw;
+  outline: none;
+  cursor: pointer;
+}
+
+.contacts__select option {
+  background: #050816;
+  color: #fff;
+}
+
+/* BOTTOM */
 .contacts__bottom {
   display: flex;
   align-items: center;
@@ -85,17 +109,13 @@
 .contacts__btn {
   min-width: 12vw;
   height: 3.5vw;
-
   padding: 0 2vw;
-
   border-radius: 999vw;
   border: 0.08vw solid rgba(255, 255, 255, 0.9);
   background: transparent;
-
   font-size: 1.1vw;
   font-weight: 500;
   color: #fff;
-
   cursor: pointer;
   transition: 0.2s ease;
 }
@@ -105,11 +125,15 @@
   color: #b400ff;
 }
 
+.contacts__btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
 .contacts__checkbox {
   display: flex;
   align-items: center;
   gap: 0.6vw;
-
   font-size: 0.9vw;
   color: rgba(255, 255, 255, 0.7);
 }
@@ -125,6 +149,21 @@
   text-underline-offset: 0.2vw;
 }
 
+/* MESSAGES */
+.contacts__message {
+  margin: 0;
+  font-size: 1vw;
+}
+
+.contacts__message--error {
+  color: #ff4d6d;
+}
+
+.contacts__message--success {
+  color: #42ff9e;
+}
+
+/* MOBILE */
 @media (max-width: 768px) {
   .contacts {
     padding: 20vw 0 12vw;
@@ -165,6 +204,16 @@
     padding: 2vw 0 2.5vw;
   }
 
+  .contacts__phone {
+    gap: 3vw;
+  }
+
+  .contacts__select {
+    min-width: 20vw;
+    font-size: 4vw;
+    padding: 2vw 0 2.5vw;
+  }
+
   .contacts__bottom {
     flex-direction: column;
     align-items: flex-start;
@@ -187,5 +236,9 @@
   .contacts__checkbox input {
     width: 4vw;
     height: 4vw;
+  }
+
+  .contacts__message {
+    font-size: 3.5vw;
   }
 }
