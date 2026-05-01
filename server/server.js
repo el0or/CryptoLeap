@@ -1,11 +1,10 @@
-import nodemailer from "nodemailer";
-
 const express = require("express");
 const mysql = require("mysql2/promise");
 const cors = require("cors");
 const dotenv = require("dotenv");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
+const nodemailer = require("nodemailer");
 
 dotenv.config();
 
