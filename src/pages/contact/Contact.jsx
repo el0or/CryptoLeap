@@ -29,6 +29,32 @@ export default function Contacts() {
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
 
+    if (name === "country") {
+      setForm((prev) => ({
+        ...prev,
+        country: value,
+        phone: "",
+      }));
+
+      setError("");
+      setSuccess("");
+      return;
+    }
+
+    if (name === "phone") {
+      const digitsOnly = value.replace(/\D/g, "");
+      const maxLength = selectedCountry.max;
+
+      setForm((prev) => ({
+        ...prev,
+        phone: digitsOnly.slice(0, maxLength),
+      }));
+
+      setError("");
+      setSuccess("");
+      return;
+    }
+
     setForm((prev) => ({
       ...prev,
       [name]: type === "checkbox" ? checked : value,
