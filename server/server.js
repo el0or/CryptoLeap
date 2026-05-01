@@ -257,16 +257,14 @@ app.get("/api/account-data", authMiddleware, async (req, res) => {
     };
 
     try {
-      const response = await fetch(
-        "https://api.frankfurter.dev/v1/latest?from=USD&to=EUR,RUB"
-      );
+      const response = await fetch("https://open.er-api.com/v6/latest/USD");
 
       if (response.ok) {
         const data = await response.json();
 
         rates = {
-          base: data.base,
-          date: data.date,
+          base: "USD",
+          date: data.time_last_update_utc || null,
           USD: 1,
           EUR: data.rates?.EUR ?? null,
           RUB: data.rates?.RUB ?? null,
@@ -287,37 +285,44 @@ app.get("/api/account-data", authMiddleware, async (req, res) => {
 });
 
 app.post("/api/contact", async (req, res) => {
-  const { name, surname, phone, email, comment } = req.body;
+  const { name, surname, phone, email, comment, agree } = req.body;
+
+  if (!name || !surname || !phone || !email || !comment || !agree) {
+    return res.status(400).json({ error: "All fields are required" });
+  }
 
   try {
     const transporter = nodemailer.createTransport({
-      service: "gmail",
+      host: "smtp.mail.ru",
+      port: 465,
+      secure: true,
       auth: {
-        user: "oresnikovigor@mail.ru",
-        pass: "ТВОЙ_APP_PASSWORD",
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
       },
     });
 
     await transporter.sendMail({
-      from: `"CryptoLeap" <oresnikovigor@mail.ru>`,
+      from: `"CryptoLeap" <${process.env.EMAIL_USER}>`,
       to: "oresnikovigor@mail.ru",
-      subject: "New Contact Form",
+      replyTo: email,
+      subject: "New contact form request",
       text: `
-Name: ${name}
-Surname: ${surname}
-Phone: ${phone}
-Email: ${email}
+  Name: ${name}
+  Surname: ${surname}
+  Phone: ${phone}
+  Email: ${email}
 
-Message:
-${comment}
-      `,
-    });
+  Comment:
+  ${comment}
+        `,
+      });
 
-    res.json({ success: true });
-  } catch (err) {
-    console.error(err);
-    res.status(500).json({ error: "Mail error" });
-  }
+      res.json({ success: true });
+    } catch (err) {
+      console.error("Contact form error:", err);
+      res.status(500).json({ error: "Failed to send email" });
+    }
 });
 
 const PORT = process.env.PORT || 5000;
