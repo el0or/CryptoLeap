@@ -1,3 +1,5 @@
+import nodemailer from "nodemailer";
+
 const express = require("express");
 const mysql = require("mysql2/promise");
 const cors = require("cors");
@@ -281,6 +283,40 @@ app.get("/api/account-data", authMiddleware, async (req, res) => {
   } catch (error) {
     console.error(error);
     return res.status(500).json({ message: "Server error" });
+  }
+});
+
+app.post("/api/contact", async (req, res) => {
+  const { name, surname, phone, email, comment } = req.body;
+
+  try {
+    const transporter = nodemailer.createTransport({
+      service: "gmail",
+      auth: {
+        user: "oresnikovigor@mail.ru",
+        pass: "ТВОЙ_APP_PASSWORD",
+      },
+    });
+
+    await transporter.sendMail({
+      from: `"CryptoLeap" <oresnikovigor@mail.ru>`,
+      to: "oresnikovigor@mail.ru",
+      subject: "New Contact Form",
+      text: `
+Name: ${name}
+Surname: ${surname}
+Phone: ${phone}
+Email: ${email}
+
+Message:
+${comment}
+      `,
+    });
+
+    res.json({ success: true });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "Mail error" });
   }
 });
 
