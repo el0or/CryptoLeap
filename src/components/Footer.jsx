@@ -8,9 +8,9 @@ export default function Footer() {
       <div className="footer__wrapper">
         <div className="footer__left">
           <div className="footer__brand">CryptoLeap</div>
-          <a className="footer__policy" href="/privacy">
+          <Link className="footer__policy" to="/privacy">
             Privacy Policies
-          </a>
+          </Link>
           <div className="footer__copy">© CryptoLeap 2025</div>
         </div>
 
